@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Bebas_Neue, Space_Grotesk, JetBrains_Mono } from 'next/font/google'
 import { ThemeProvider } from '@/components/ui/theme-provider'
+import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
 const bebasNeue = Bebas_Neue({ weight: '400', subsets: ['latin'], variable: '--font-display' })
@@ -129,6 +130,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
           {children}
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   )
