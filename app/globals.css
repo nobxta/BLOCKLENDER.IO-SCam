@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #F8F6F3;
+  --bg-surface: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --border: #E5E2DC;
+  --divider: #EEEBE6;
+  --text-primary: #0F0F0F;
+  --text-secondary: #6B6B6B;
+  --text-muted: #9A9A9A;
+  --accent: #C0392B;
+  --accent-muted-bg: #FEF0EF;
+  --accent-border: rgba(192,57,43,0.2);
+}
+
+.dark {
+  --bg-primary: #080A0D;
+  --bg-surface: #0D0F14;
+  --bg-card: #12151C;
+  --border: #2A2D35;
+  --divider: #1A1D24;
+  --text-primary: #E8EAF0;
+  --text-secondary: #8B909E;
+  --text-muted: #4A4F5E;
+  --accent: #E24B4A;
+  --accent-muted-bg: #1A0808;
+  --accent-border: rgba(226,75,74,0.25);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+html, body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::selection {
+  background-color: var(--accent);
+  color: white;
+}
+
+input, textarea, select {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-muted);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-border);
+  outline: none;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
