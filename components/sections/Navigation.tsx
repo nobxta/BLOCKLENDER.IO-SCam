@@ -43,8 +43,8 @@ export default function Navigation() {
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           className="font-display text-2xl tracking-[0.12em] cursor-pointer"
         >
-          <span style={{ color: 'var(--text-primary)' }}>SCAM</span>
-          <span style={{ color: 'var(--accent)' }}>WATCH</span>
+          <span style={{ color: 'var(--text-primary)' }}>EXPO</span>
+          <span style={{ color: 'var(--accent)' }}>SED</span>
         </button>
 
         <div className="hidden md:flex items-center gap-8">

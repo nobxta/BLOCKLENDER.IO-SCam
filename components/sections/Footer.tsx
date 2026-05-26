@@ -20,8 +20,8 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-wrap justify-between items-center gap-6 mb-8">
           <div className="font-display text-xl tracking-widest">
-            <span style={{ color: 'var(--text-primary)' }}>SCAM</span>
-            <span style={{ color: 'var(--accent)' }}>WATCH</span>
+            <span style={{ color: 'var(--text-primary)' }}>EXPO</span>
+            <span style={{ color: 'var(--accent)' }}>SED</span>
           </div>
 
           <div className="flex gap-6 flex-wrap">
