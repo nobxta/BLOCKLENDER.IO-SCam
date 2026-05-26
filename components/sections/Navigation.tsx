@@ -29,7 +29,9 @@ export default function Navigation() {
   }
 
   return (
+    <header role="banner">
     <nav
+      aria-label="Main navigation"
       className={`fixed top-0 left-0 right-0 z-50 h-16 transition-all duration-300 ${
         scrolled ? 'backdrop-blur-md' : ''
       }`}
@@ -122,5 +124,6 @@ export default function Navigation() {
         )}
       </AnimatePresence>
     </nav>
+    </header>
   )
 }

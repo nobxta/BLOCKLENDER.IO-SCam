@@ -3,9 +3,21 @@ import Link from 'next/link'
 import { Shield, ArrowLeft } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy',
-  description: 'Privacy policy for blocklender.info. Learn how we handle data submitted through our scam reporting form. No personal data is stored. All submissions are anonymous.',
+  title: 'Privacy Policy — How We Protect Your Data',
+  description: 'Privacy policy for blocklender.info. No cookies, no tracking, no database. All scam report submissions are anonymous. GDPR and CCPA compliant.',
   alternates: { canonical: 'https://blocklender.info/privacy' },
+  openGraph: {
+    title: 'Privacy Policy — blocklender.info',
+    description: 'No cookies. No tracking. No database. Learn how blocklender.info protects your privacy while documenting the Blocklender.io scam.',
+    url: 'https://blocklender.info/privacy',
+    type: 'website',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'blocklender.info Privacy Policy' }],
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Privacy Policy — blocklender.info',
+    description: 'No cookies. No tracking. No database. All submissions anonymous.',
+  },
 }
 
 export default function PrivacyPage() {
@@ -189,8 +201,29 @@ export default function PrivacyPage() {
 
         </div>
 
+        {/* Internal links for SEO */}
+        <div className="mt-12 p-5 rounded-lg" style={{ backgroundColor: 'var(--bg-card)', border: '1px solid var(--border)' }}>
+          <p className="font-body font-semibold text-[14px] mb-3" style={{ color: 'var(--text-primary)' }}>
+            Related Pages
+          </p>
+          <div className="space-y-2">
+            <Link href="/legal" className="block font-body text-[13px] hover:underline" style={{ color: 'var(--text-secondary)' }}>
+              Legal Disclaimer — Criminal law applicable to Blocklender.io fraud
+            </Link>
+            <Link href="/#report" className="block font-body text-[13px] hover:underline" style={{ color: 'var(--text-secondary)' }}>
+              Submit a Scam Report — Anonymous reporting form for victims
+            </Link>
+            <Link href="/#evidence" className="block font-body text-[13px] hover:underline" style={{ color: 'var(--text-secondary)' }}>
+              Evidence File — 8 documented red flags against Blocklender.io
+            </Link>
+            <Link href="/sitemap-page" className="block font-body text-[13px] hover:underline" style={{ color: 'var(--text-secondary)' }}>
+              Sitemap — Browse all pages on blocklender.info
+            </Link>
+          </div>
+        </div>
+
         {/* Bottom nav */}
-        <div className="mt-16 pt-8 flex flex-wrap gap-6 justify-between items-center" style={{ borderTop: '1px solid var(--divider)' }}>
+        <div className="mt-8 pt-8 flex flex-wrap gap-6 justify-between items-center" style={{ borderTop: '1px solid var(--divider)' }}>
           <Link
             href="/"
             className="font-mono text-[12px] transition-colors duration-200"
@@ -207,6 +240,19 @@ export default function PrivacyPage() {
           </Link>
         </div>
 
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://blocklender.info" },
+                { "@type": "ListItem", "position": 2, "name": "Privacy Policy", "item": "https://blocklender.info/privacy" }
+              ]
+            })
+          }}
+        />
       </div>
     </main>
   )

@@ -4,66 +4,62 @@ import { Analytics } from '@vercel/analytics/next'
 import { ThemeProvider } from '@/components/ui/theme-provider'
 import './globals.css'
 
-const bebasNeue = Bebas_Neue({ weight: '400', subsets: ['latin'], variable: '--font-display' })
-const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-body' })
-const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono' })
+const bebasNeue = Bebas_Neue({ weight: '400', subsets: ['latin'], variable: '--font-display', display: 'swap' })
+const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-body', display: 'swap' })
+const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono', display: 'swap' })
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://blocklender.info'),
   title: {
-    default: 'blocklender.info — Is Blocklender.io a Scam? Yes. Full Proof.',
+    default: 'Is Blocklender.io a Scam? Yes — Full Proof | blocklender.info',
     template: '%s | blocklender.info'
   },
-  description: 'Blocklender.io is a confirmed crypto scam targeting XRP holders. Fake Instagram accounts, fake ads, AI-generated content, and an impossible 12% APR promise were used to steal funds. Victims have lost $24,000+. Flagged by Ripple CTO David Schwartz. ScamAdviser score 6/100. Scam-Detector score 11.3/100. Do not deposit.',
+  description: 'Blocklender.io is a confirmed crypto scam targeting XRP holders. Fake Instagram, fake ads, impossible 12% APR. Victims lost $24,000+. Flagged by Ripple CTO David Schwartz. ScamAdviser: 6/100.',
   keywords: [
-    'blocklender.io scam',
-    'blocklender scam',
-    'is blocklender.io a scam',
-    'is blocklender.io legit',
-    'is blocklender.io real',
-    'is blocklender.io safe',
-    'blocklender.io review 2026',
-    'blocklender.io fraud',
-    'blocklender.io fake',
-    'blocklender.io withdrawal blocked',
-    'blocklender XRP scam',
-    'blocklender 12 percent APR scam',
-    'blocklender.io trust score',
-    'blocklender.io joelkatz warning',
-    'blocklender.io namecheap anonymous',
-    'blocklender.io 403 error',
-    'blocklender fake instagram david schwartz',
-    'blocklender fake ads',
-    'blocklender.io scamadviser 6 out of 100',
-    'blocklender.io scam detector 11.3',
-    'XRP yield scam 2026',
-    'XRP lending scam',
-    'XRP ledger scam platform',
-    'fake XRP lending platform',
-    'crypto lending scam 2026',
-    'crypto scam XRP holders',
-    'XRP fake APR scam',
-    'fake 12 percent crypto yield',
-    'crypto exit scam 2026',
-    'XRP ponzi scheme',
-    'blocklender victim reports',
-    'blocklender lost money',
-    'blocklender withdrawal redirect scam',
-    'https://blocklender.io scam',
-    'blocklender.io scam or real',
-    'blocklender.io honest review',
-    'should i use blocklender.io',
-    'blocklender.io reddit warning',
+    // Branded searches
+    'blocklender', 'blocklender.io', 'blocklender.info', 'block lender',
+    'blocklender.io scam', 'blocklender scam',
+    // Trust / review searches
+    'is blocklender.io a scam', 'is blocklender.io legit', 'is blocklender legit',
+    'is blocklender.io real', 'is blocklender.io safe', 'is blocklender safe',
+    'blocklender.io review', 'blocklender.io review 2026', 'blocklender review',
+    'blocklender.io honest review', 'blocklender.io scam or legit',
+    'blocklender real or fake', 'blocklender trustworthy',
+    'should i use blocklender.io', 'can i trust blocklender',
+    // Negative defense (people searching after seeing the scam)
+    'blocklender.io not a scam', 'blocklender.io legitimate',
+    'blocklender.io verified', 'blocklender proof',
+    // How-to / informational
+    'how blocklender.io works', 'how blocklender scam works',
+    'how to report blocklender', 'how to get money back from blocklender',
+    'blocklender withdrawal', 'blocklender.io withdrawal blocked',
+    // Comparison / alternative
+    'blocklender vs xrp lending', 'blocklender.io alternative',
+    'blocklender.io vs real lending', 'safe XRP lending platforms',
+    // Fraud specifics
+    'blocklender.io fraud', 'blocklender.io fake', 'blocklender.io trust score',
+    'blocklender.io joelkatz warning', 'blocklender.io namecheap anonymous',
+    'blocklender.io 403 error', 'blocklender fake instagram david schwartz',
+    'blocklender fake ads', 'blocklender.io scamadviser 6 out of 100',
+    'blocklender.io scam detector 11.3', 'blocklender 12 percent APR scam',
+    // XRP / crypto scam keywords
+    'XRP yield scam 2026', 'XRP lending scam', 'XRP ledger scam platform',
+    'fake XRP lending platform', 'crypto lending scam 2026',
+    'crypto scam XRP holders', 'XRP fake APR scam',
+    'fake 12 percent crypto yield', 'crypto exit scam 2026', 'XRP ponzi scheme',
+    // Victim intent
+    'blocklender victim reports', 'blocklender lost money',
+    'blocklender withdrawal redirect scam', 'blocklender.io reddit warning',
     'blocklender.io ripple cto warning',
   ],
   authors: [{ name: 'blocklender.info', url: 'https://blocklender.info' }],
   creator: 'blocklender.info',
   publisher: 'blocklender.info',
-  category: 'Consumer Protection, Crypto Fraud, Public Warning',
+  category: 'Consumer Protection',
   classification: 'Scam Warning, Cryptocurrency Fraud, Public Interest',
   openGraph: {
-    title: 'blocklender.info — Blocklender.io is a Confirmed XRP Scam',
-    description: 'Fake Instagram. Fake ads. Impossible 12% APR. Real theft. Victims lost $24,000+. Flagged by Ripple CTO @JoelKatz. ScamAdviser: 6/100. Full evidence documented.',
+    title: 'Blocklender.io is a Confirmed XRP Scam — blocklender.info',
+    description: 'Fake Instagram. Fake ads. Impossible 12% APR. Real theft. Victims lost $24,000+. Flagged by Ripple CTO @JoelKatz. ScamAdviser: 6/100. Full evidence.',
     url: 'https://blocklender.info',
     siteName: 'blocklender.info',
     type: 'website',
@@ -73,15 +69,16 @@ export const metadata: Metadata = {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'blocklender.info — Blocklender.io Scam Exposed',
+        alt: 'Blocklender.io Scam Exposed — Full evidence documented at blocklender.info',
       }
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Is Blocklender.io a Scam? Yes — blocklender.info',
-    description: 'Confirmed XRP scam. Fake Instagram. Withdrawal redirect. $24,000+ stolen. Flagged by Ripple CTO. Full proof at blocklender.info',
+    title: 'Is Blocklender.io a Scam? Yes — Full Proof',
+    description: 'Confirmed XRP scam. Fake Instagram. Withdrawal redirect. $24,000+ stolen. Flagged by Ripple CTO David Schwartz. ScamAdviser 6/100.',
     images: ['/og-image.png'],
+    creator: '@blocklenderinfo',
   },
   robots: {
     index: true,
@@ -98,9 +95,17 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://blocklender.info',
+    languages: {
+      'en': 'https://blocklender.info',
+      'x-default': 'https://blocklender.info',
+    },
   },
   verification: {
     google: 'add-your-google-search-console-verification-code-here',
+  },
+  other: {
+    'apple-mobile-web-app-capable': 'yes',
+    'apple-mobile-web-app-status-bar-style': 'black-translucent',
   },
 }
 
@@ -108,11 +113,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
+      dir="ltr"
       suppressHydrationWarning
       className={`${bebasNeue.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable}`}
     >
       <head>
-        <link rel="canonical" href="https://blocklender.info" />
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
         <meta name="language" content="English" />
         <meta name="revisit-after" content="3 days" />
         <meta name="rating" content="general" />
@@ -121,10 +127,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="target" content="all" />
         <meta name="HandheldFriendly" content="True" />
         <meta name="MobileOptimized" content="320" />
-        <meta property="og:locale" content="en_US" />
-        <meta property="og:type" content="website" />
-        <meta name="theme-color" content="#080A0D" />
+        <meta name="theme-color" content="#080A0D" media="(prefers-color-scheme: dark)" />
+        <meta name="theme-color" content="#F8F6F3" media="(prefers-color-scheme: light)" />
         <meta name="msapplication-TileColor" content="#080A0D" />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
       <body className="font-body antialiased">
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>

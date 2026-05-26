@@ -13,6 +13,7 @@ export default function Footer() {
   const siteLinks = [
     { label: 'Privacy Policy', href: '/privacy' },
     { label: 'Legal Disclaimer', href: '/legal' },
+    { label: 'Sitemap', href: '/sitemap-page' },
   ]
 
   return (
@@ -24,7 +25,7 @@ export default function Footer() {
             <span style={{ color: 'var(--accent)' }}>SED</span>
           </div>
 
-          <div className="flex gap-6 flex-wrap">
+          <nav aria-label="Footer navigation" className="flex gap-6 flex-wrap">
             {externalLinks.map((link) => (
               <a
                 key={link.label}
@@ -52,7 +53,7 @@ export default function Footer() {
                 {link.label}
               </Link>
             ))}
-          </div>
+          </nav>
         </div>
 
         <div className="pt-8" style={{ borderTop: '1px solid var(--divider)' }}>
