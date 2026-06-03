@@ -8,6 +8,7 @@ import ThemeToggle from '@/components/ui/ThemeToggle'
 const navLinks = [
   { href: '#what-is-this', label: 'What Is This' },
   { href: '#how-it-works', label: 'How The Scam Works' },
+  { href: '#fake-accounts', label: 'Fake Accounts' },
   { href: '#evidence', label: 'Evidence' },
   { href: '#report', label: 'Report' },
 ]

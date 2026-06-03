@@ -1,6 +1,7 @@
 import Navigation from '@/components/sections/Navigation'
 import Hero from '@/components/sections/Hero'
 import HowItWorks from '@/components/sections/HowItWorks'
+import FakeInstagram from '@/components/sections/FakeInstagram'
 import Evidence from '@/components/sections/Evidence'
 import ReportForm from '@/components/sections/ReportForm'
 import Footer from '@/components/sections/Footer'
@@ -17,6 +18,7 @@ export default function Page() {
           <meta itemProp="author" content="blocklender.info" />
           <Hero />
           <HowItWorks />
+          <FakeInstagram />
           <Evidence />
           <ReportForm />
         </article>
